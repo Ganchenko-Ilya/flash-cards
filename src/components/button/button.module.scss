@@ -1,0 +1,61 @@
+.baseButton {
+  all: unset;
+
+  cursor: pointer;
+
+  display: inline-block;
+
+  padding: 6px 28px;
+
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-m);
+
+  border-style: none;
+  border-radius: 4px;
+
+  &:focus-visible {
+    padding: 4px 26px;
+    border: 2px solid var(--color-info-700);
+    outline: none;
+  }
+
+  &:disabled {
+    color: var(--color-light-900);
+  }
+}
+
+.primary {
+  background-color: var(--color-accent-500);
+  box-shadow: 0 4px 18px rgba(#8c61ff, 0.35);
+
+  &:active {
+    background-color: var(--color-accent-700);
+  }
+
+  &:hover {
+    background-color: var(--color-accent-300);
+  }
+
+  &:disabled {
+    background-color: var(--color-accent-900);
+  }
+}
+
+.secondary {
+  background-color: var(--color-dark-300);
+  box-shadow: 0 4px 4px rgba(#4d5660, 0.13);
+
+  &:active {
+    background-color: var(--color-dark-500);
+  }
+
+  &:hover {
+    background-color: var(--color-dark-100);
+  }
+}
+
+.fullWidth {
+  width: 100%;
+  text-align: center;
+}

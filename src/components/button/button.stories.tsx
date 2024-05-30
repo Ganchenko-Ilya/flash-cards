@@ -1,0 +1,47 @@
+import type { Meta, StoryObj } from '@storybook/react'
+
+import { Button } from './button'
+
+const meta = {
+  component: Button,
+  tags: ['autodocs'],
+  title: 'Components/Button',
+} satisfies Meta<typeof Button>
+
+type Story = StoryObj<typeof meta>
+
+export const Primary: Story = {
+  args: {
+    children: 'Primary Button',
+    disabled: true,
+    variant: 'primary',
+  },
+}
+export const LinkPrimary: Story = {
+  args: {
+    as: 'a',
+    children: 'Primary Button',
+    disabled: false,
+    href: '#',
+    variant: 'primary',
+  },
+}
+
+export const Secondary: Story = {
+  args: {
+    children: 'Secondary Button',
+    disabled: false,
+    variant: 'secondary',
+  },
+}
+
+export const FullWidth: Story = {
+  args: {
+    children: 'Full Width Primary Button',
+    disabled: false,
+    fullWidth: true,
+    variant: 'primary',
+  },
+}
+
+export default meta
